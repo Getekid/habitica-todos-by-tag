@@ -1,4 +1,4 @@
-from bottle import route, run
+from bottle import route, run, template
 import requests
 
 
@@ -34,6 +34,8 @@ def todos():
         for todo in todosResp["data"]:
             for todoTag in todo["tags"]:
                 todos[todoTag].append(todo["text"])
+
+    return template('todo-list', todos=todos)
 
 
 run(host='localhost', port=8080)

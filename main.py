@@ -35,7 +35,7 @@ def todos():
             for todoTag in todo["tags"]:
                 todos[todoTag].append(todo["text"])
 
-    return template('todo-list', todos=todos)
+    return template('todo-list', tags=tags, todos=todos)
 
 
 run(host='localhost', port=8080)

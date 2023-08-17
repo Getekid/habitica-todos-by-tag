@@ -1,5 +1,8 @@
+# Ignore the environment variables file.
+.env
+
 # Ignore the CSS minified files.
-/views/*.min.css
+views/*.min.css
 
 # Ignore the PyCharm IDE files.
 .idea

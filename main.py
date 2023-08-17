@@ -1,17 +1,18 @@
 from bottle import route, run, template
 import requests
-from os import path
+from os import getenv, path
+from dotenv import load_dotenv
 
+load_dotenv()
 
 @route('/')
 def todos():
     # Set the base variables
     baseUrl = "https://habitica.com/api/v3/"
-    # TODO: Get API credentials from external file
     headers = {
         "Content-Type": "application/json",
-        "x-api-user": "",  # Add here your API User
-        "x-api-key": "",  # Add here your API Key
+        "x-api-user": getenv("API_USER_ID"),
+        "x-api-key": getenv("API_TOKEN"),
     }
     tags = {}
     todos = {}

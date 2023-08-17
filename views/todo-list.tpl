@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>My Habitica Todos</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 
 <body>

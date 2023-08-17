@@ -1,3 +1,6 @@
+# Ignore the CSS minified files.
+/views/*.min.css
+
 # Ignore the PyCharm IDE files.
 .idea
 
